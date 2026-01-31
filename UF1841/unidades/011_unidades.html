@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unidades relativas</title>
+    <style>
+        :root {
+            font-size: 60px;
+        }
+
+        .padre {
+            font-size: 20px;
+        }
+
+        .hijo {
+            font-size: 0.5em;
+        }
+
+        .nieto {
+            font-size: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, quasi ipsa. Dignissimos blanditiis sapiente iure
+        at doloremque rem fugit omnis nam atque eius. Necessitatibus repellat, modi iusto dolore itaque dicta.</p>
+    <div class="padre">
+        Yo soy tu padre
+        <p class="hijo">
+            Yo soy el hijo
+            <span class="nieto">yo soy el nieto</span>
+        </p>
+    </div>
+</body>
+
+</html>

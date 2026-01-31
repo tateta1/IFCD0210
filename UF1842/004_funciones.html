@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sumar(a, b) {
+            let total = a + b;
+            return total;
+        }
+
+        let z = 6, q = 8;
+        let resultado = sumar(z, q);
+        console.log(resultado);
+
+    </script>
+    <script>
+        function mayor(primero, segundo) { // el número x es es mayor que el y (o son iguales)
+            if (primero > segundo) {
+                console.log("El número " + primero + " es mayor que " + segundo);
+            }
+            else if (primero == segundo) {
+                console.log("Los dos son iguales");
+            }
+            else {
+                console.log("El número " + segundo + " es mayor que " + primero);
+            }
+        }
+        mayor(9, 9);
+    </script>
+    <script>
+        function menor(primero, segundo) {
+            if (primero > segundo) {
+                return primero + " es mayor que " + segundo;
+            }
+            if (primero == segundo) {
+                return "Son iguales";
+            }
+            return segundo + " es mayor que " + primero;
+        }
+
+        let salida = menor(80, 80);
+
+        console.log(salida);
+
+    </script>
+
+    <script>
+        // hacer una función que reciba una cadena de texto y devuelva su longitud
+        function largo(cadena) {
+            let letra = '';
+            let indice = 0;
+            while (letra != '$') {
+                letra = cadena[indice];
+                console.log(letra);
+                indice++;
+            }
+            return(indice - 1);
+        }
+        let rdo = largo("esta es una prueba$");
+        console.log(rdo);
+    </script>
+</body>
+
+</html>

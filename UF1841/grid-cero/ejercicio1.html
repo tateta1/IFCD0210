@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUISMA</title>
+    <style>
+        .contenedor {
+            background-color: lightgray;
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            text-align: center;
+            background-color: white;
+            border: 2px solid red;
+            min-height: 75px;
+            margin: 10px;
+        }
+
+        .primero {
+            grid-column: 1 / span 2;
+            grid-row: 1 / span 2;
+        }
+
+        .octavo {
+            grid-column: 3 / 4;
+            grid-row: 3 / span 2;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="grid-item primero">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item octavo">8</div>
+    </div>
+</body>
+
+</html>

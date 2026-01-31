@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipografia unidades relativas</title>
+    <style>
+        html {
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: aliceblue;
+            font-size: 1.6rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            border-bottom: 3px solid blue;
+            color: blue;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: rgb(96, 96, 249);
+        }
+
+        .padre {
+            font-size: 2rem;
+            margin: 20px;
+            padding: 1rem;
+            border: 1px solid coral;
+            background-color: lightblue;
+        }
+
+        .hijo {
+            font-size: 1.2rem;
+            padding: 0.8rem;
+            border: 1px dashed darkgreen;
+        }
+
+        .nivel1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            padding: 1rem;
+            border: 1px solid red;
+            background-color: bisque;
+        }
+
+        .nivel2 {
+            font-size: 0.8em;
+            padding: 1.5em;
+            border: 1px dashed black;
+            background-color: blanchedalmond;
+            margin-top: 1em;
+        }
+
+        .nivel3 {
+            font-size: 1.2em;
+            padding: 1.5em;
+            background-color: cornsilk;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Experimento con unidades de tipografia relativas</h1>
+    <div class="padre">
+        <h2>Unidad REM</h2>
+        <p>Contenedor padre</p>
+        <div class="hijo">
+            Elemento hijo <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore, molestiae suscipit
+            corrupti voluptate sit quaerat neque quam, necessitatibus ipsa nisi tempore maiores dolores praesentium
+            recusandae vel iusto quasi animi eius.
+        </div>
+    </div>
+    <!-- ................................... -->
+
+    <div class="nivel1">
+        <h2>Efecto Cascada</h2>
+        <p>Nivel 1. Font size 2rem</p>
+        <div class="nivel2">
+            <p>Nivel 2. Font size 1.6rem</p>
+            <div class="nivel3">
+                <p>Nivel 3. Font size 1.2 em</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------------------------------------- -->
+</body>
+
+</html>

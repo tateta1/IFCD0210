@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #D11463, #E7645C);
+    font: 400 16px/1.5 "TeX Gyre Heros", Helvetica, Arial, sans-serif
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+header {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #262626;
+}
+
+header nav ul {
+    color: white;
+    list-style: none;
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 37%;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 15px;
+}
+
+.titles {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+#micro {
+    height: 32px;
+    width: 196px;
+    background: url(https://tech.microbit.org/assets/new-logo.svg);
+}
+
+#community {
+    height: 32px;
+    width: 360px;
+    background: url(https://tech.microbit.org/assets/developer-community.svg);
+}
+
+#micro,
+#community {
+    transform: scale(0.85);
+}
+
+#section-head {
+    text-align: center;
+    color: white;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    letter-spacing: 4px;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px
+}
+
+section h2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 900;
+}
+
+.button-flex {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.button-flex a {
+    background-color: black;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 50px;
+}
+
+footer {
+    background-color: #262626;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    margin-top: 150px;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    margin-left: 22%;
+}
+
+footer ul li {
+    display: inline;
+    border-right: 1px solid #666;
+    margin: 0 9px 5px 0;
+    padding: 0 12px 0 0;
+}
+
+#special {
+    border: none;
+}
+
+footer p {
+    margin-left: 24%;
+}

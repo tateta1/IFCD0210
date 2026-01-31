@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANTO GRIAL</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: cadetblue;
+        }
+
+        .contenedor {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 80px 1fr auto;
+            gap: 10px;
+            width: 80%;
+            min-height: 80vh;
+            grid-template-areas:
+                "header  header nav"
+                "aside main main"
+                "footer footer footer";
+        }
+
+        .header {
+            grid-area: header;
+            background-color: antiquewhite;
+        }
+
+        .nav {
+            grid-area: nav;
+            background-color: blue;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: tomato;
+        }
+
+        .aside {
+            grid-area: aside;
+            background-color: violet;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <header class="header">HEADER</header>
+        <nav class="nav">NAV</nav>
+        <main class="main">MAIN</main>
+        <aside class="aside">ASIDE</aside>
+        <footer class="footer">FOOTER</footer>
+    </div>
+</body>
+
+</html>

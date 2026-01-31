@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Emoji Picker Avanzado</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        body.dark {
+            background: #121212;
+            color: #e0e0e0;
+        }
+
+        input,
+        select {
+            font-size: 16px;
+            padding: 5px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            border: 1px solid #ccc;
+            padding: 6px;
+            text-align: center;
+            vertical-align: bottom;
+            width: 80px;
+            font-size: 28px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        td:hover {
+            background: #ffd;
+        }
+
+        body.dark td:hover {
+            background: #333;
+        }
+
+        .hex {
+            font-size: 12px;
+            color: #444;
+            margin-top: 4px;
+            display: block;
+        }
+
+        body.dark .hex {
+            color: #aaa;
+        }
+
+        #contador {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Emoji Picker Avanzado</h1>
+
+    <label for="search">Buscar por nombre:</label>
+    <input type="text" id="search" placeholder="Ej: face, heart">
+
+    <label for="category">Filtrar por categoría:</label>
+    <select id="category">
+        <option value="all">Todas</option>
+    </select>
+
+    <div id="contador">Emojis mostrados: 0</div>
+
+    <table id="tabla"></table>
+
+    <script>
+        let emojis = [];
+        let categories = new Set();
+
+        const tabla = document.getElementById('tabla');
+        const searchInput = document.getElementById('search');
+        const categorySelect = document.getElementById('category');
+        const contadorDiv = document.getElementById('contador');
+
+        // Detectar modo oscuro automáticamente
+        // if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        //   document.body.classList.add('dark');
+        // }
+
+        // Cargar emojis.json
+        fetch('./emojis.json')
+            .then(res => res.json())
+            .then(list => {
+                emojis = list;
+
+                // Obtener categorías únicas
+                list.forEach(e => {
+                    if (e.group) categories.add(e.group);
+                });
+
+                // Llenar el select de categorías
+                categories = Array.from(categories).sort();
+                categories.forEach(cat => {
+                    const opt = document.createElement('option');
+                    opt.value = cat;
+                    opt.textContent = cat;
+                    categorySelect.appendChild(opt);
+                });
+
+                renderTable();
+            })
+            .catch(err => {
+                console.error('Error cargando emojis.json:', err);
+                document.body.innerText = 'No se pudo cargar emojis.json. Asegúrate de que está en la misma carpeta que este HTML.';
+            });
+
+        // Renderizar tabla filtrando por búsqueda y categoría
+        function renderTable() {
+            tabla.innerHTML = '';
+            const filterText = searchInput.value.toLowerCase();
+            const filterCat = categorySelect.value;
+
+            let fila = null;
+            let contador = 0;
+
+            emojis.forEach(e => {
+                const nameMatch = e.name && e.name.toLowerCase().includes(filterText);
+                const catMatch = filterCat === 'all' || e.group === filterCat;
+
+                if (!nameMatch || !catMatch) return;
+
+                // Nueva fila cada 10 emojis
+                if (contador % 10 === 0) {
+                    fila = document.createElement('tr');
+                    tabla.appendChild(fila);
+                }
+
+                const chars = e.emoji;
+                const codepoints = Array.from(chars).map(ch =>
+                    'U+' + ch.codePointAt(0).toString(16).toUpperCase()
+                ).join(' ');
+
+                const td = document.createElement('td');
+                td.innerHTML = `${chars}<span class="hex">${codepoints}</span>`;
+
+                // Clic para copiar al portapapeles
+                td.addEventListener('click', () => {
+                    navigator.clipboard.writeText(chars)
+                        .then(() => alert(`Emoji copiado: ${chars}`))
+                        .catch(err => alert('Error copiando emoji'));
+                });
+
+                fila.appendChild(td);
+                contador++;
+            });
+
+            contadorDiv.textContent = `Emojis mostrados: ${contador}`;
+        }
+
+        // Eventos de filtro
+        searchInput.addEventListener('input', renderTable);
+        categorySelect.addEventListener('change', renderTable);
+    </script>
+
+</body>
+
+</html>

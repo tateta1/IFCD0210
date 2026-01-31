@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Phudu:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Phudu:wght@300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: "Phudu", sans-serif;
+    text-align: center;
+}
+
+a:visited,
+a:active {
+    color: inherit
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100%;
+    justify-content: space-between;
+}
+
+.contenedor .contenido-principal {
+    background-color: #FBDA5F;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 75vh;
+    align-items: center;
+}
+
+.contenido-principal h1 {
+    font-size: 4rem;
+}
+
+.nav-principal {
+    display: flex;
+    border-radius: 20vw;
+    background-color: #FDF0BF;
+    width: 40vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    margin: 1rem 1rem 10rem 1rem;
+}
+
+.nav-principal>img {
+    width: 15%;
+    margin-left: 3%;
+}
+
+.nav-principal>div:nth-child(3)>a:nth-child(1) {
+    background-color: #E7DBAE;
+    border-radius: 500px;
+    padding: 0.5rem 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nav-principal>div>a>img {
+    width: 8%;
+}
+
+.nav-principal>div:nth-child(3)>a:nth-child(2) {
+    background-color: #FBDA5F;
+    border-radius: 500px;
+    padding: 0.5rem;
+}
+
+.link-normal>a {
+    margin: 0 0.45rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.switch {
+    background-color: #F5F6F7;
+    width: 15vw;
+    border-radius: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.50rem;
+    margin: 1rem 1rem 2.5rem 1rem;
+}
+
+.switch a:first-child {
+    padding: 0.75rem;
+    border-radius: 10rem;
+    background-color: #FBDA5F;
+}
+
+.switch span {
+    color: white;
+    padding: 5px;
+    border-radius: 7px;
+    background-color: #241C0D;
+}
+
+.contenido-principal>p {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+.pricing {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 5rem;
+    min-width: 100%;
+}
+
+.pricing div {
+    flex: 0 1 20rem;
+    height: 40rem;
+    background-color: #FFFFFF;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.pricing div>p {
+    margin: 1rem 0;
+}
+
+.pricing div span {
+    background-color: #EEEEEE;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pricing div:nth-child(3) span {
+    background-color: #1C5BE6;
+    color: #FBDA5F;
+}
+
+.pricing div ul {
+    list-style-type: none;
+}
+
+.pricing div ul li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.pricing div ul li::before {
+    content: "✔";
+    position: absolute;
+    left: 0.5rem;
+    top: 0;
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.footer-color {
+    background-color: #FFFFFF;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #0E0E0E;
+    border-radius: 20px;
+    min-height: 25vh;
+    align-items: center;
+    margin: 1rem;
+}
+
+.footer h1 {
+    margin: 1.5rem 0;
+    text-align: center;
+    color: #FBDA5F;
+    font-size: 3.5rem;
+}
+
+.footer>a {
+    width: 10%;
+    padding: 1rem 0;
+    border-radius: 10rem;
+    text-align: center;
+    background-color: #FBDA5F;
+    font-weight: bolder;
+    font-size: 1.5rem
+}
+
+.footer-info {
+    margin: 2rem 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+}

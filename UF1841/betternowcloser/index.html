@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BETTER | luisma </title>
+    <style>
+        body {
+            /* background-color: #161616; */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 60%;
+            margin: 0 auto;
+            margin-top: 2rem;
+            padding: 1rem;
+        }
+
+        .bento {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-areas:
+                "a a a a a a a b b b b b"
+                "a a a a a a a b b b b b"
+                "c c c d d d d e e e e e"
+                "c c c d d d d e e e e e"
+                "c c c g g g g e e e e e"
+                "f f f g g g g e e e e e"
+                "f f f g g g g e e e e e";
+            gap: 0.5rem;
+            width: 100%;
+            grid-auto-rows: 11vh;
+        }
+
+        .item {
+            border-radius: 10px;
+            overflow: hidden;
+            /* border: 3px solid red; */
+        }
+
+        .item img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .a {
+            grid-area: a;
+        }
+
+        .b {
+            grid-area: b;
+        }
+
+        .c {
+            grid-area: c;
+        }
+
+        .d {
+            grid-area: d;
+        }
+
+        .e {
+            grid-area: e;
+        }
+
+        .f {
+            grid-area: f;
+        }
+
+        .g {
+            grid-area: g;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bento">
+            <div class="item a"><img src="./imgs/primera.jpg" alt=""></div>
+            <div class="item b"><img src="./imgs/segunda.jpg" alt="" srcset=""></div>
+            <div class="item c"><img src="./imgs/tercera.jpg" alt="" srcset=""></div>
+            <div class="item d"><img src="./imgs/cuerta.jpg" alt="" srcset=""></div>
+            <div class="item e"><img src="./imgs/quinta.jpg" alt="" srcset=""></div>
+            <div class="item f"><img src="./imgs/sexta.jpg" alt="" srcset=""></div>
+            <div class="item g"><img src="./imgs/septima.jpg" alt="" srcset=""></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //var mensaje = "Primer mensaje";
+        // camel case
+        function crearMensaje() {
+            var mensaje = "Segundo mensaje";
+            alert(mensaje);
+        }
+
+
+
+        //crearMensaje();
+        //alert("Fuera de la función: " + mensaje);
+    </script>
+    <script>
+        //NOTAS
+        let nota = 6.9;
+        if (nota < 5) {
+            console.log("SUSPENSO");
+        }
+        else {
+            if (nota < 6) {
+                 console.log("APROBADO");
+            }
+            else {
+                if (nota < 7) {
+                     console.log("BIEN");
+                }
+                else {
+                    if (nota < 9) {
+                         console.log("NOTABLE");
+                    }
+                    else {
+                         console.log("SOBRESALIENTE");
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script>
+        nota = 3;
+        if(nota < 5){console.log("SUSPENSO");
+        }
+        else if(nota < 6) { console.log("APROBADO");
+        }
+        else if(nota < 7){ console.log("BIEN");
+        }
+        else if(nota < 9){console.log("NOTABLE");
+        }
+        else{console.log("SOBRESALIENTE");
+        }
+    </script>
+
+    <script>
+        let diaSemana = 10;
+        switch(diaSemana){
+            case 1:
+                console.log("LUNES");
+                break;
+            case 2:
+                console.log("MARTES");
+                break;
+            default:
+                console.log("DIA DE FIESTA");
+                break;
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Variable dentro y fuera de la función</h1>
+
+    <script>
+        let cantidad = 0;
+        let vacio = !cantidad;
+
+        console.log("Cantidad: " + cantidad);
+        console.log("Vacio: " + vacio);
+
+        let mensaje = "Hola Mundo";
+        let sinMensaje = !mensaje;
+        let conMensaje = !sinMensaje;
+        console.log("Sin mensaje: " + sinMensaje);
+        console.log("Con mensaje: " + conMensaje);
+
+    </script>
+
+
+    <button onclick="creaTitulo()">Título </button>
+
+    <script>
+        function creaTitulo() {
+            document.write("Esto es un título");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+</head>
+
+<body>
+    <script>
+        let vueltas = 0;
+        while (vueltas < 20) {
+            console.log("Vuelta: " + vueltas);
+            vueltas++;
+        }
+    </script>
+
+    <script>
+        // Bucle infinito
+        let contador = 0;
+        console.log("Antes del bucle");
+        while (true) {
+            console.log("Contador: " + contador);
+            contador++;
+            if (contador == 7) {
+                break;
+            }
+        }
+        console.log("Después del bucle");
+    </script>
+
+    <script>
+        let atras = 10;
+        while (atras >= 0) {
+            console.log("Atrás: " + atras);
+            atras--;
+        }
+        console.log("Feliz Año Nuevo");
+    </script>
+    <script>
+        atras = 10;
+
+        console.log("Inicio bucle...");
+
+        while (true) {
+            console.log("Atrás: " + atras);
+            atras--;
+            if(atras < 0){
+                break;
+            }
+        }
+        console.log("Feliz Año Nuevo");
+    </script>
+
+    <script>
+        let ct = -1;
+        while(ct <= 20){
+            ct++;
+            if(ct%2 == 1){ //Números impares
+                continue;
+            }
+            console.log("Número: " + ct);
+        }
+        console.log("Se acabó")
+    </script>
+
+    
+</body>
+
+</html>

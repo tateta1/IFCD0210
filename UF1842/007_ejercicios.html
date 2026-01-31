@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Ejercicio 1
+        function area(base, altura){
+            let resultado = base * altura;
+            return resultado;
+        }
+        //console.log(area(6,8));
+
+        // Ejercicio 2
+        function tablaMul(factor){
+            for(let i = 1; i <= 10; i++){
+                console.log(factor + " * " + i + " = " + factor * i);
+            }
+        }
+
+        // Ejercicio 3
+        function cuentaVocales(cadena){
+            let contador = 0;
+            for(let i = 0; i < cadena.length; i++){
+                switch (cadena[i].toLowerCase()) {
+                    case 'a':
+                    case 'e':
+                    case 'i':
+                    case 'o':
+                    case 'u':
+                        contador ++;
+                        break;
+                }
+            }
+            return contador;
+        }
+
+        function cuentaVocales2(cadena){
+            let contador = 0;
+            let vocales = "aeiouáéíóú";
+            for(let letra of cadena){
+                if(vocales.includes(letra.toLowerCase())){
+                    contador ++;
+                }
+            }
+            return contador;
+        }
+        function cuentaLetras(cadena,vocales){
+            let contador = 0;
+            for(let letra of cadena){
+                if(vocales.includes(letra.toLowerCase())){
+                    contador ++;
+                }
+            }
+            return contador;
+        }
+        function cuentaVocales3(cadena){
+            let contador = [0,0,0,0,0];
+
+            for(let i = 0; i < cadena.length; i++){
+                switch (cadena[i].toLowerCase()) {
+                    case 'a':
+                        contador[0]++;
+                        break;
+                    case 'e':
+                        contador[1]++;
+                        break;                        
+                    case 'i':
+                        contador[2]++;
+                        break;                        
+                    case 'o':
+                        contador[3]++;
+                        break;                        
+                    case 'u':
+                        contador[4]++;
+                        break;                        
+                }
+            }
+            return contador;
+        }           
+        
+        // Ejercicio 4
+        function positivos(lista){
+            let salida = [];
+            for(let i  = 0; i < lista.length; i++){
+                if(lista[i] >= 0){
+                    salida.push(lista[i]);
+                }
+            }
+            return salida;
+        }
+
+        // Ejercicio 5
+        function sumaImpares(numero){
+            let resultado = 0;
+            for(let i = 1; i< numero; i += 2){
+                resultado += i;
+            }
+            return resultado;
+        }
+
+        function sumaImpares2(numero){
+            let resultado = 0;
+            for(let i = 0; i< numero; i ++){
+                if(i % 2 == 1){
+                    resultado += i;
+                }
+            }
+            return resultado;
+        }
+
+        //Ejercicio 6
+        function dosAarrays(lista1,lista2){
+            let salida = [];
+            for(let num of lista1){
+                if(lista2.includes(num) && !salida.includes(num)){
+                    salida.push(num);
+                }
+            }
+            return salida;
+        }
+
+        // Ejercicio 7 98765445454
+        function digitos(numero){
+            return  numero.toString().length;
+        }
+
+        // Ejercicio 8
+
+        function cadenaMayor(cadenas){
+            let salida = '';
+            for(let cadena of cadenas){
+                if(salida.length < cadena.length){
+                    salida = cadena;
+                }
+            }
+            return salida;
+        }
+    </script>
+</head>
+<body>
+    <h1>Ejercicios Javascript</h1>
+    <p>
+        1. Escribe una función que calcule el área de un rectángulo.<br>
+        Recibe como parámetros el largo y el ancho.
+    </p>
+    <p>
+        2. Hacer una función que calcule la tabla de multiplicar de un número que recibe como parámetro.
+        <pre>
+            1 X 5 = 5
+            2 X 5 = 10
+        </pre>
+    </p>
+    <p>
+        3. Escribe una función que cuente las vocales de una cadena que recibe como parámetro.
+    </p>
+    <p>
+        4. Escribe una función que reciba como parámetro un array de números y devuelva otro array que contenga solo los positivos.
+    </p>
+    <p>
+        5. Hacer una función que sume todos los números impares menores a uno dado como parámetro.
+    </p>
+    <p>
+        6. Hacer una función que encuentre los números comunes a dos listas pasadas como parámetros y los devuelva en otra lista.
+    </p>
+    <p>
+        7. Hacer una función que cuente los dígitos de un número
+    </p>
+    <p>
+        8. Hacer una función que devuelva la cadena más larga de las contenidas en un array de cadenas que se pasa como parámetro.
+    </p>
+</body>
+</html>
+

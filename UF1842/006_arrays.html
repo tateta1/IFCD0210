@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Definición
+        let vacio = ['p', 'q'];
+        let numeros = [1, 2, 3, 4];
+        let func = new Array(1, 2, 3, 4);
+
+        // Operador propagación "spread"
+        let prop = [100, 200, 300, ...vacio, 888, 999];
+
+        prop[0] = 0;
+        prop[100] = 9;
+
+        let letras = [..."Hola Mundo"];
+
+        function toString(lista) { // Devuelve una cadena con los elementos de la lista
+            let salida = '';
+            for (let i = 0; i < lista.length; i++) {
+                salida += lista[i];
+            }
+            return salida;
+        }
+        // Hacer una función que devuelva el valor mínimo de un array numérico
+        function minimo(lista) {
+            let salida = Infinity;
+
+            for (let i = 0; i < lista.length; i++) {
+                if (lista[i] < salida) {
+                    salida = lista[i];
+                }
+            }
+            return salida;
+        }
+
+        let datos = [90, 2, 34, 1, 555, 6, 7, 3, 0];
+
+
+    </script>
+
+    <script>
+        /*
+        Crear un array con cinco valores numéricos.
+        Comprobar si son todos positivos.
+        Devolver el producto de todos los positivos del array.
+        */
+        function producto(lista) {
+            let salida = 1;
+            let actual = 0;
+            for (let i = 0; i < lista.length; i++) {
+                actual = lista[i];
+                if (actual >= 0) {
+                    salida = salida *  actual;
+                }
+            }
+            return salida;
+        }
+
+        let cinco = [12, 3, -2, 7, -1];
+        console.log(producto(cinco));
+
+
+    </script>
+</body>
+
+</html>

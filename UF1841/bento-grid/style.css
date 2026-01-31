@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: #F4F4F6;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    width: 50%;
+    max-width: 960px;
+    margin: 3rem auto;
+}
+
+.container>h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    grid-template-areas:
+        "tigre tigre tigre tigre tigre tigre tigre tigre tigre tigre tigre tigre"
+        "coco coco coco coco coco coco loro loro loro loro loro loro"
+        "vaca vaca vaca vaca vaca vaca perro perro perro perro perro perro"
+        "elefante elefante elefante elefante estrella estrella estrella estrella caballo caballo caballo caballo"
+        "zorro zorro zorro zorro serp serp serp serp caca caca caca caca";
+}
+
+.grid-box>div {
+    background-color: white;
+    min-height: 360px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+}
+
+.card-second {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    transform: scale(0.8);
+    transition: transform 0.5s ease;
+}
+
+.card-second img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    transform: scale(0.8);
+    transition: transform 0.5s ease;
+}
+
+.card img:hover,
+.card-second img:hover {
+    transform: scale(1);
+}
+
+.card .info {
+    justify-content: space-between;
+    margin: 1rem 0;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tigre {
+    grid-area: tigre;
+}
+
+.coco {
+    grid-area: coco;
+}
+
+.loro {
+    grid-area: loro;
+}
+
+.vaca {
+    grid-area: vaca;
+}
+
+.perro {
+    grid-area: perro;
+}
+
+.elefante {
+    grid-area: elefante;
+}
+
+.estrella {
+    grid-area: estrella;
+}
+
+.caballo {
+    grid-area: caballo;
+}
+
+.zorro {
+    grid-area: zorro;
+}
+
+.serp {
+    grid-area: serp;
+}
+
+.caca {
+    grid-area: caca;
+}

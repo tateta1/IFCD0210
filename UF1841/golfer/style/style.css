@@ -1,0 +1,154 @@
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        main a {
+            text-decoration: underline;
+            text-decoration-color: #eee;
+            text-underline-offset: 5px;
+            transition: text-decoration-color 0.3s ease, text-underline-offset 0.3s ease, text-decoration-thickness 0.3s ease
+        }
+
+        main a:hover {
+            text-decoration-color: #afafaf;
+            text-underline-offset: 7px;
+            text-decoration-thickness: 2px;
+        }
+
+        .contenedor {
+            margin: 0 auto;
+            max-width: 40%;
+        }
+
+        header ul {
+            list-style: none;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        header ul li {
+            display: inline;
+            padding: 20px;
+        }
+
+        header ul li :hover {
+            text-decoration: none;
+        }
+
+        header ul li a {
+            color: black;
+            text-decoration: underline;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 36px;
+        }
+
+        footer div {
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        footer a {
+            color: black;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            text-decoration: none;
+        }
+
+        main {
+            padding: 18px;
+        }
+
+        main h1 {
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-size: 40px;
+        }
+
+        main h3 {
+            line-height: 2;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        main ul {
+            padding-inline-start: 30px;
+            line-height: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        #pie1 {
+            line-height: 1.5;
+        }
+
+        #pie2 {
+            line-height: 2.5;
+        }
+
+        /* Estilos indice BLOG */
+
+        .post {
+            border-width: 0 0 1px 0;
+            border-color: #afafaf;
+            border-style: solid;
+            margin-bottom: 3.12rem;
+        }
+
+        .date {
+            font-size: 1.56rem;
+            color: gray;
+            line-height: 1.5;
+            margin-bottom: 0px;
+        }
+
+        .post-title {
+            font-size: 1.8rem;
+        }
+
+        .post-title a {
+            color: black;
+        }
+
+        .excerpt {
+            font-size: 1.25rem;
+            margin-top: 0.75rem;
+            margin-bottom: 3rem;
+        }
+
+        /* Pagina about */
+
+        .burro {
+            background-image: url("../img/gafas.png");
+            background-size: cover;
+            background-position: center;
+            height: 1000px;
+            width: 1000px;
+            background-color: green;
+        }
+
+
+        /*        -----------------------------------------------                         */
+
+        .esquinas {
+            width: 400px;
+            height: 400px;
+            background-color: orangered;
+            border: 5px solid blue;
+            border-radius: 400px 0 20px 0;
+        }

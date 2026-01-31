@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid desde cero</title>
+    <style>
+        body {
+            background-color: aqua;
+        }
+
+        .contenedor {
+            display: grid;
+            background-color: antiquewhite;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+
+        .grid-item {
+            background-color: rgb(118, 166, 203);
+            border: 1px solid red;
+        }
+
+        .cabecera {
+            background-color: blue;
+            grid-column: span 2;
+            /* grid-column-start: 1;
+            grid-column-end: 4; */
+        }
+
+        .segundo {
+            background-color: tomato;
+            grid-row: 3 / span 2;
+            /* grid-row-start: 2;
+            grid-row-end: 8; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="grid-item cabecera">Elemento 1</div>
+        <div class="grid-item segundo">Elemento 2</div>
+        <div class="grid-item">Elemento 3</div>
+        <div class="grid-item">Elemento 4</div>
+        <div class="grid-item">Elemento 5</div>
+        <div class="grid-item">Elemento 6</div>
+        <div class="grid-item">Elemento 7</div>
+        <div class="grid-item">Elemento 8</div>
+    </div>
+</body>
+
+</html>

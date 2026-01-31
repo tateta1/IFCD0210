@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo {
+            background-color: greenyellow;
+        }
+
+        .titulo2 {
+            background-color: orangered;
+            position: absolute;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: blue;
+            color: white;
+            z-index: 100;
+            text-align: center;
+        }
+
+        section {
+            padding: 70px;
+            height: 20vh;
+            background-color: peru;
+        }
+
+        .avatar-container {
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+
+        .avatar-container img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+        .indicador {
+            position: absolute;
+            bottom: 5px;
+            right: 10px;
+            width: 18px;
+            height: 18px;
+            background-color: green;
+            border: 2px solid white;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="contenedor">
+        <nav class="navbar">ESTO ES UN NAVBAR</nav>
+        <section>
+            <h1 class="titulo">Este es un ejemplo</h1>
+            <h1 class="titulo2">Este es otro ejemplo</h1>
+        </section>
+        <div class="avatar-container">
+            <img src="https://placehold.co/300" alt="Foto de perfil">
+            <span class="indicador"></span>
+        </div>
+    </main>
+</body>
+
+</html>
