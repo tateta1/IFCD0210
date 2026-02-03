@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa calificaciones</title>
+</head>
+
+<body>
+    <h1>Programa Calificaciones</h1>
+    <hr>
+    <p>Calificaciones recibidas:</p>
+    <ul id="notas"></ul>
+    <p>Media de las calificaciones: <span id="med">0</span></p>
+    <p>Estado: <span id="estado"></span></p>
+    <p>Calificación: <span id="calificacion"></span></p>
+
+    <script>
+
+
+        const calculaCalificaciones = (listaNotas) => {
+            let ulNotas = document.getElementById("notas");
+            let sumaNotas = 0;
+            for (let nota of listaNotas) {
+                sumaNotas += nota;
+
+                li = document.createElement('li');
+                li.innerHTML = `${nota}`;
+                ulNotas.appendChild(li);
+            }
+            let media = sumaNotas / listaNotas.length;
+            let estado = media >= 5 ? "Aprobado" : "Suspenso";
+            let calificacion = "";
+            if (media < 5) {
+                calificacion = "Insuficiente";
+            } else if (media < 7) {
+                calificacion = "Suficiente";
+            } else if (media < 9) {
+                calificacion = "Notable";
+            } else if (media >= 9) {
+                calificacion = "Sobresaliente";
+            }
+
+            let respuesta = [media, estado, calificacion];
+
+            pintaValores(respuesta);
+
+            return respuesta;
+        }
+
+        const pintaValores = (calificaciones) => {
+            let spanMedia = document.getElementById("med");
+            let spanEstado = document.getElementById("estado");
+            let spanCalificacion = document.getElementById("calificacion");
+
+            spanMedia.innerHTML = `${calificaciones[0].toFixed(2)}`;
+            spanEstado.innerHTML = `${calificaciones[1]}`;
+            spanCalificacion.innerHTML = `${calificaciones[2]}`;
+
+            console.log(calificaciones);
+        }
+
+        calculaCalificaciones([5, 6, 8, 5, 7, 4, 8]);
+    </script>
+
+</body>
+
+</html>
