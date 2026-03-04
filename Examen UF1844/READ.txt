@@ -1,0 +1,35 @@
+# Proyecto Web - Examen
+
+## Descripción
+
+Este proyecto es un **sistema web sencillo** desarrollado en **Python con Flask**, que incluye:
+
+1. Formulario de usuario: solicita **nombre, edad y ciudad**, y muestra un mensaje personalizado.  
+2. Función de cálculo de área de un rectángulo: pide **base y altura**, valida que sean positivos y muestra el área.  
+3. Sistema básico de gestión de inventario: permite **ver, añadir, actualizar y eliminar productos** en un inventario usando diccionarios.  
+
+El proyecto utiliza:
+
+- **Flask** para la aplicación web.  
+- **HTML y CSS minimalista** para formularios y visualización.  
+- **SQLite** como base de datos ligera (opcional para guardar inventario).  
+- **DBeaver** para visualizar la base de datos.
+
+---
+
+## Requisitos
+
+- **Python 3.14** o superior  
+- **pip** actualizado  
+- Librerías Python: Flask
+
+---
+
+## Instalación
+
+1. Instalar Python 3.14 desde [python.org](https://www.python.org/downloads/).  
+2. Verificar instalación:
+
+```bash
+python --version
+python -m pip --version
