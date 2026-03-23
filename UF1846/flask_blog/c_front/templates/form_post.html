@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{%block content%}
+<h1>Login</h1>
+<form action="" method="post">
+    <label for="titulo">Título:</label><br>
+    <input type="text" name="contenido" id="" value="{{post.titulo if post}}"><br><br>
+
+    <label for="contenido">Contenido:</label><br>
+    <textarea name="contenido" id="">{{post.contenido if post}}</textarea><br><br>
+
+    <label for="estado">Estado:</label><br>
+    <select name="estado" id="">
+        <option value="borrador" {{'selected' if post.estado=='borrador' }}>Borrador</option>
+        <option value="publicado" {{'selected' if post.estado=='publicado' }}>Publicado</option>
+    </select><br><br>
+
+    <input type="submit" value="Enviar">
+</form>
+
+<p><a href="/">Volver</a></p>
+{%endblock%}
